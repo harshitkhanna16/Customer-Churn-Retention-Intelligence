@@ -1,0 +1,164 @@
+{
+  "summary": {
+    "total_rows": 10000,
+    "total_columns": 14,
+    "total_missing_values": 0,
+    "duplicate_customer_ids": 0,
+    "duplicate_rows": 0,
+    "is_clean": true
+  },
+  "null_counts": {
+    "RowNumber": 0,
+    "CustomerId": 0,
+    "Surname": 0,
+    "CreditScore": 0,
+    "Geography": 0,
+    "Gender": 0,
+    "Age": 0,
+    "Tenure": 0,
+    "Balance": 0,
+    "NumOfProducts": 0,
+    "HasCrCard": 0,
+    "IsActiveMember": 0,
+    "EstimatedSalary": 0,
+    "Exited": 0
+  },
+  "categorical_checks": {
+    "Geography": {
+      "invalid_count": 0,
+      "observed_values": {
+        "France": 5014,
+        "Germany": 2509,
+        "Spain": 2477
+      }
+    },
+    "Gender": {
+      "invalid_count": 0,
+      "observed_values": {
+        "Male": 5457,
+        "Female": 4543
+      }
+    }
+  },
+  "boundary_checks": {
+    "CreditScore": {
+      "min_observed": 350.0,
+      "max_observed": 850.0,
+      "expected_range": [
+        300,
+        850
+      ],
+      "out_of_bounds_count": 0
+    },
+    "Age": {
+      "min_observed": 18.0,
+      "max_observed": 92.0,
+      "expected_range": [
+        18,
+        100
+      ],
+      "out_of_bounds_count": 0
+    },
+    "Tenure": {
+      "min_observed": 0.0,
+      "max_observed": 10.0,
+      "expected_range": [
+        0,
+        10
+      ],
+      "out_of_bounds_count": 0
+    },
+    "Balance": {
+      "min_observed": 0.0,
+      "max_observed": 250898.09,
+      "expected_range": [
+        0.0,
+        1000000.0
+      ],
+      "out_of_bounds_count": 0
+    },
+    "NumOfProducts": {
+      "min_observed": 1.0,
+      "max_observed": 4.0,
+      "expected_range": [
+        1,
+        4
+      ],
+      "out_of_bounds_count": 0
+    },
+    "HasCrCard": {
+      "min_observed": 0.0,
+      "max_observed": 1.0,
+      "expected_range": [
+        0,
+        1
+      ],
+      "out_of_bounds_count": 0
+    },
+    "IsActiveMember": {
+      "min_observed": 0.0,
+      "max_observed": 1.0,
+      "expected_range": [
+        0,
+        1
+      ],
+      "out_of_bounds_count": 0
+    },
+    "EstimatedSalary": {
+      "min_observed": 11.58,
+      "max_observed": 199992.48,
+      "expected_range": [
+        0.0,
+        10000000.0
+      ],
+      "out_of_bounds_count": 0
+    }
+  },
+  "outlier_summary": {
+    "CreditScore": {
+      "q1": 584.0,
+      "q3": 718.0,
+      "iqr": 134.0,
+      "lower_fence": 383.0,
+      "upper_fence": 919.0,
+      "outlier_count": 15,
+      "outlier_pct": 0.15
+    },
+    "Age": {
+      "q1": 32.0,
+      "q3": 44.0,
+      "iqr": 12.0,
+      "lower_fence": 14.0,
+      "upper_fence": 62.0,
+      "outlier_count": 359,
+      "outlier_pct": 3.59
+    },
+    "Balance": {
+      "q1": 0.0,
+      "q3": 127644.24,
+      "iqr": 127644.24,
+      "lower_fence": -191466.36000000002,
+      "upper_fence": 319110.60000000003,
+      "outlier_count": 0,
+      "outlier_pct": 0.0
+    },
+    "EstimatedSalary": {
+      "q1": 51002.11,
+      "q3": 149388.2475,
+      "iqr": 98386.1375,
+      "lower_fence": -96577.09624999999,
+      "upper_fence": 296967.45375,
+      "outlier_count": 0,
+      "outlier_pct": 0.0
+    }
+  },
+  "target_summary": {
+    "counts": {
+      "0": 7963,
+      "1": 2037
+    },
+    "churn_rate": 0.2037,
+    "retention_rate": 0.7963,
+    "imbalance_ratio": 3.91
+  }
+}
